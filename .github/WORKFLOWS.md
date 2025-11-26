@@ -1,87 +1,87 @@
 # GitHub Actions Workflows
 
-Tài liệu này mô tả các GitHub Actions workflows được sử dụng trong package.
+This document describes the GitHub Actions workflows used in this package.
 
 ## 1. Update Packagist (`update-packagist.yml`)
 
-### Mục đích
-Tự động thông báo cho Packagist cập nhật package khi có thay đổi mới.
+### Purpose
+Automatically notify Packagist to update the package when there are new changes.
 
-### Kích hoạt khi
-- Push lên branch `main`
-- Tạo tag mới (v*)
-- Publish release mới
+### Triggers
+- Push to `main` branch
+- New tags (v*)
+- Published releases
 
-### Cấu hình Secrets
+### Required Secrets
 
-Để workflow hoạt động, bạn cần thêm 2 secrets vào GitHub repository:
+To enable this workflow, you need to add 2 secrets to your GitHub repository:
 
-1. Truy cập: `https://github.com/ethantechnology/laravel-query-watcher/settings/secrets/actions`
+1. Go to: `https://github.com/ethantechnology/laravel-query-watcher/settings/secrets/actions`
 
-2. Thêm secrets:
-   - `PACKAGIST_USERNAME`: Username Packagist của bạn
-   - `PACKAGIST_TOKEN`: API token từ Packagist
+2. Add the following secrets:
+   - `PACKAGIST_USERNAME`: Your Packagist username
+   - `PACKAGIST_TOKEN`: API token from Packagist
 
-### Lấy Packagist API Token
+### Getting Packagist API Token
 
-1. Đăng nhập vào https://packagist.org/
-2. Vào **Profile** > **Show API Token**
-3. Copy token và thêm vào GitHub secrets
+1. Login to https://packagist.org/
+2. Go to **Profile** > **Show API Token**
+3. Copy the token and add it to GitHub secrets
 
 ---
 
 ## 2. Run Tests (`tests.yml`)
 
-### Mục đích
-Kiểm tra package hoạt động với nhiều phiên bản PHP và Laravel khác nhau.
+### Purpose
+Test the package with multiple PHP and Laravel versions.
 
 ### Test Matrix
 - **PHP**: 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, 8.3
 - **Laravel**: 5.8, 6.x, 7.x, 8.x, 9.x, 10.x, 11.x
 
-### Kích hoạt khi
-- Push lên branch `main`
-- Tạo Pull Request
+### Triggers
+- Push to `main` branch
+- Pull requests
 
 ---
 
-## Cách thêm GitHub Secrets
+## How to Add GitHub Secrets
 
-### Bước 1: Lấy API Token từ Packagist
+### Step 1: Get API Token from Packagist
 ```bash
-# Đăng nhập vào packagist.org
-# Vào: https://packagist.org/profile
+# Login to packagist.org
+# Go to: https://packagist.org/profile
 # Click "Show API Token"
-# Copy token
+# Copy the token
 ```
 
-### Bước 2: Thêm vào GitHub
-1. Mở repository: https://github.com/ethantechnology/laravel-query-watcher
-2. Vào **Settings** > **Secrets and variables** > **Actions**
+### Step 2: Add to GitHub
+1. Open repository: https://github.com/ethantechnology/laravel-query-watcher
+2. Go to **Settings** > **Secrets and variables** > **Actions**
 3. Click **New repository secret**
-4. Thêm:
+4. Add:
    - Name: `PACKAGIST_USERNAME`
-   - Value: username Packagist của bạn
+   - Value: Your Packagist username
 5. Click **Add secret**
-6. Lặp lại cho:
+6. Repeat for:
    - Name: `PACKAGIST_TOKEN`
-   - Value: API token vừa copy
+   - Value: The API token you copied
 
-### Bước 3: Kiểm tra
-Push một commit mới hoặc tạo tag để test workflow:
+### Step 3: Verify
+Push a new commit or create a tag to test the workflow:
 ```bash
 git add .
 git commit -m "Test workflow"
 git push origin main
 ```
 
-Kiểm tra tại: `https://github.com/ethantechnology/laravel-query-watcher/actions`
+Check the workflow at: `https://github.com/ethantechnology/laravel-query-watcher/actions`
 
 ---
 
 ## Workflow Status Badges
 
-Thêm badges vào README.md:
+Add badges to README.md:
 
 ```markdown
 [![Update Packagist](https://github.com/ethantechnology/laravel-query-watcher/workflows/Update%20Packagist/badge.svg)](https://github.com/ethantechnology/laravel-query-watcher/actions)
