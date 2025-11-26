@@ -46,6 +46,19 @@ class QueryWatcher
     }
 
     /**
+     * Determine if query watching should be enabled
+     * 
+     * @return bool
+     */
+    protected function shouldWatch()
+    {
+        return config('query-watcher.enabled', true);
+    }
+
+    /**
+     * Get the current request path or artisan command name
+     *
+     * @return string
      */
     protected function getCurrentPath()
     {
