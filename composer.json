@@ -1,0 +1,42 @@
+{
+    "name": "yourvendor/laravel-query-watcher",
+    "description": "A Laravel package to monitor and log database queries with configurable thresholds",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "database",
+        "query",
+        "monitoring",
+        "performance"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0|^8.1|^8.2|^8.3",
+        "illuminate/support": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+        "illuminate/database": "^5.8|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.8|^4.0|^5.0|^6.0|^7.0|^8.0|^9.0",
+        "phpunit/phpunit": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "YourVendor\\LaravelQueryWatcher\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "YourVendor\\LaravelQueryWatcher\\QueryWatcherServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
