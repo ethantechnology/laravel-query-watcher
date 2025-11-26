@@ -22,7 +22,7 @@ return [
     | Set to false to disable slow query monitoring while keeping query count monitoring active.
     |
     */
-    'slow_query_enabled' => env('QUERY_WATCHER_SLOW_QUERY_ENABLED', true),
+    'slow_query_enabled' => env('QUERY_WATCHER_SLOW_QUERY_ENABLED', false),
 
     /*
     |--------------------------------------------------------------------------

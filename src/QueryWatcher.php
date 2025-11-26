@@ -62,7 +62,7 @@ class QueryWatcher
      */
     protected function shouldDetectSlowQueries()
     {
-        return config('query-watcher.slow_query_enabled', true);
+        return config('query-watcher.slow_query_enabled', false);
     }
 
     /**

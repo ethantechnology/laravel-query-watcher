@@ -2,6 +2,13 @@
 
 All notable changes to `laravel-query-watcher` will be documented in this file.
 
+## [1.2.0] - 2024-11-26
+
+### Changed
+- **BREAKING**: Changed `slow_query_enabled` default value from `true` to `false`
+- Slow query detection is now opt-in by default to reduce performance overhead
+- Users need to explicitly set `QUERY_WATCHER_SLOW_QUERY_ENABLED=true` to enable slow query detection
+
 ## [1.1.0] - 2024-11-26
 
 ### Added
