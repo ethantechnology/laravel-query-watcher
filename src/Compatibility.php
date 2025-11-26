@@ -1,6 +1,6 @@
 <?php
 
-namespace YourVendor\LaravelQueryWatcher;
+namespace ETA\LaravelQueryWatcher;
 
 /**
  * Compatibility helper for different Laravel versions

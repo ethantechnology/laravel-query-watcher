@@ -1,5 +1,5 @@
 {
-    "name": "yourvendor/laravel-query-watcher",
+    "name": "eta/laravel-query-watcher",
     "description": "A Laravel package to monitor and log database queries with configurable thresholds",
     "type": "library",
     "keywords": [
@@ -12,8 +12,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Your Name",
-            "email": "your.email@example.com"
+            "name": "HaiHV",
+            "email": "support@ethan-tech.com"
         }
     ],
     "require": {
@@ -27,13 +27,13 @@
     },
     "autoload": {
         "psr-4": {
-            "YourVendor\\LaravelQueryWatcher\\": "src/"
+            "ETA\\LaravelQueryWatcher\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "YourVendor\\LaravelQueryWatcher\\QueryWatcherServiceProvider"
+                "ETA\\LaravelQueryWatcher\\QueryWatcherServiceProvider"
             ]
         }
     },

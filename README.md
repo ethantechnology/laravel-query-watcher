@@ -16,7 +16,7 @@ A Laravel package to monitor and log database queries with configurable threshol
 Install the package via Composer:
 
 ```bash
-composer require yourvendor/laravel-query-watcher
+composer require eta/laravel-query-watcher
 ```
 
 ### Laravel Auto-Discovery
@@ -30,7 +30,7 @@ Add the service provider to `config/app.php`:
 ```php
 'providers' => [
     // ...
-    YourVendor\LaravelQueryWatcher\QueryWatcherServiceProvider::class,
+    ETA\LaravelQueryWatcher\QueryWatcherServiceProvider::class,
 ],
 ```
 
@@ -226,8 +226,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Credits
 
-- [Your Name](https://github.com/yourusername)
+- [HaiHV](https://github.com/ethantechnology)
 
 ## Support
 
-If you discover any security-related issues, please email your.email@example.com instead of using the issue tracker.
+If you discover any security-related issues, please email support@ethan-tech.com instead of using the issue tracker.

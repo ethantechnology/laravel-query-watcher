@@ -1,6 +1,6 @@
 <?php
 
-namespace YourVendor\LaravelQueryWatcher;
+namespace ETA\LaravelQueryWatcher;
 
 use Illuminate\Support\ServiceProvider;
 

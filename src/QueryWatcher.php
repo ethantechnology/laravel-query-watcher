@@ -1,11 +1,11 @@
 <?php
 
-namespace YourVendor\LaravelQueryWatcher;
+namespace ETA\LaravelQueryWatcher;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
-use YourVendor\LaravelQueryWatcher\Compatibility;
+use ETA\LaravelQueryWatcher\Compatibility;
 
 class QueryWatcher
 {
