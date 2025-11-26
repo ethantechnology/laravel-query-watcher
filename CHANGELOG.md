@@ -2,6 +2,14 @@
 
 All notable changes to `laravel-query-watcher` will be documented in this file.
 
+## [1.3.0] - 2024-11-26
+
+### Changed
+- **BREAKING**: Changed `enabled` default value from `true` to `false`
+- Package is now completely opt-in by default to prevent unexpected performance impact
+- Users need to explicitly set `QUERY_WATCHER_ENABLED=true` to enable the query watcher
+- This allows users to enable monitoring only when needed (e.g., in local/development environments)
+
 ## [1.2.0] - 2024-11-26
 
 ### Changed

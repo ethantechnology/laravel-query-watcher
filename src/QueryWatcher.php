@@ -52,7 +52,7 @@ class QueryWatcher
      */
     protected function shouldWatch()
     {
-        return config('query-watcher.enabled', true);
+        return config('query-watcher.enabled', false);
     }
 
     /**

@@ -79,22 +79,6 @@ return [
     ],
 ];
 ```
-
-## Environment Variables
-
-Add these to your `.env` file:
-
-```env
-# Enable query watcher
-QUERY_WATCHER_ENABLED=true
-
-# Query count threshold
-QUERY_WATCHER_THRESHOLD=50
-
-# Log level
-QUERY_WATCHER_LOG_LEVEL=warning
-
-# Enable/disable slow query detection (disabled by default)
 QUERY_WATCHER_SLOW_QUERY_ENABLED=false
 
 # Slow query threshold (milliseconds)

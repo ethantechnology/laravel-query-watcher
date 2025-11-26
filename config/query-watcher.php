@@ -8,10 +8,10 @@ return [
     |--------------------------------------------------------------------------
     |
     | This option controls whether the query watcher is enabled.
-    | Set to false to disable query monitoring entirely.
+    | Set to true to enable query monitoring.
     |
     */
-    'enabled' => env('QUERY_WATCHER_ENABLED', true),
+    'enabled' => env('QUERY_WATCHER_ENABLED', false),
 
     /*
     |--------------------------------------------------------------------------
