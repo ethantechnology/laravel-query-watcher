@@ -2,27 +2,22 @@
 
 All notable changes to `laravel-query-watcher` will be documented in this file.
 
-## [Unreleased]
+## [1.0.0] - 2025-11-26
 
 ### Added
-- Initial release
+- Initial stable release
 - Query count monitoring with configurable threshold
 - Slow query detection with execution time tracking
 - Flexible logging with custom log levels and channels
-- Path and command exclusion support
+- Path and command exclusion support with wildcards
 - Environment-specific enabling
 - Optional query details logging (SQL and bindings)
 - Comprehensive configuration options
 - Compatibility helper class for supporting older Laravel versions
 
-### Changed
-- Extended support to Laravel 5.8+ (from 9.0+)
-- Extended support to PHP 7.2+ (from 8.0+)
-- Removed typed properties for PHP 7.2 compatibility
-- Removed return type declarations for broader PHP version support
-
-## [1.0.0] - 2024-01-15
-
-### Added
-- First stable release with Laravel 5.8 - 11.x support
-- PHP 7.2 - 8.3 support
+### Features
+- Support for Laravel 5.8, 6.x, 7.x, 8.x, 9.x, 10.x, and 11.x
+- Support for PHP 7.2, 7.3, 7.4, 8.0, 8.1, 8.2, and 8.3
+- Publishable configuration file
+- Auto-discovery support for Laravel 5.5+
+- Backward compatible with legacy Laravel projects
