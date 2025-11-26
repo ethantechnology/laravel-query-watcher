@@ -94,6 +94,9 @@ QUERY_WATCHER_THRESHOLD=50
 # Log level
 QUERY_WATCHER_LOG_LEVEL=warning
 
+# Enable/disable slow query detection
+QUERY_WATCHER_SLOW_QUERY_ENABLED=true
+
 # Slow query threshold (milliseconds)
 QUERY_WATCHER_SLOW_QUERY_THRESHOLD=1000
 

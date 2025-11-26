@@ -2,7 +2,17 @@
 
 All notable changes to `laravel-query-watcher` will be documented in this file.
 
-## [1.0.0] - 2025-11-26
+## [1.1.0] - 2024-11-26
+
+### Added
+- New configuration option `slow_query_enabled` to enable/disable slow query detection independently
+- New method `shouldDetectSlowQueries()` to check if slow query detection is enabled
+- Environment variable `QUERY_WATCHER_SLOW_QUERY_ENABLED` for easier configuration
+
+### Changed
+- Slow query detection can now be disabled while keeping query count monitoring active
+
+## [1.0.0] - 2024-11-26
 
 ### Added
 - Initial stable release

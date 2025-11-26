@@ -15,6 +15,17 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Enable Slow Query Detection
+    |--------------------------------------------------------------------------
+    |
+    | This option controls whether slow query detection is enabled.
+    | Set to false to disable slow query monitoring while keeping query count monitoring active.
+    |
+    */
+    'slow_query_enabled' => env('QUERY_WATCHER_SLOW_QUERY_ENABLED', true),
+
+    /*
+    |--------------------------------------------------------------------------
     | Query Count Threshold
     |--------------------------------------------------------------------------
     |

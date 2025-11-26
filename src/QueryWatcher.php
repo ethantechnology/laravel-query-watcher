@@ -56,6 +56,16 @@ class QueryWatcher
     }
 
     /**
+     * Determine if slow query detection should be enabled
+     * 
+     * @return bool
+     */
+    protected function shouldDetectSlowQueries()
+    {
+        return config('query-watcher.slow_query_enabled', true);
+    }
+
+    /**
      * Get the current request path or artisan command name
      *
      * @return string
@@ -109,6 +119,11 @@ class QueryWatcher
     {
         DB::listen(function ($query) {
             $this->queryCount++;
+
+            // Check if slow query detection is enabled
+            if (!$this->shouldDetectSlowQueries()) {
+                return;
+            }
 
             $slowQueryThreshold = config('query-watcher.slow_query_threshold', 0);
 
