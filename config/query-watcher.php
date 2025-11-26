@@ -95,19 +95,4 @@ return [
         // 'db:seed',
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Environment Detection
-    |--------------------------------------------------------------------------
-    |
-    | Only enable query watcher in these environments.
-    | Set to null or empty array to enable in all environments.
-    |
-    */
-    'environments' => [
-        'local',
-        'development',
-        'staging',
-    ],
-
 ];

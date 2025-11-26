@@ -46,29 +46,6 @@ class QueryWatcher
     }
 
     /**
-     * Determine if query watching should be enabled
-     * 
-     * @return bool
-     */
-    protected function shouldWatch()
-    {
-        if (!config('query-watcher.enabled', true)) {
-            return false;
-        }
-
-        $environments = config('query-watcher.environments');
-
-        if (is_array($environments) && !empty($environments)) {
-            return in_array(app()->environment(), $environments);
-        }
-
-        return true;
-    }
-
-    /**
-     * Get the current request path or artisan command name
-     *
-     * @return string
      */
     protected function getCurrentPath()
     {

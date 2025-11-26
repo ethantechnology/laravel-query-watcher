@@ -77,13 +77,6 @@ return [
         // 'migrate',
         // 'db:seed',
     ],
-    
-    // Environments where watcher is enabled
-    'environments' => [
-        'local',
-        'development',
-        'staging',
-    ],
 ];
 ```
 
@@ -189,25 +182,10 @@ In `config/query-watcher.php`:
 ],
 ```
 
-### Environment-Specific Monitoring
-
-In `config/query-watcher.php`:
-
-```php
-// Only enable in local and staging
-'environments' => [
-    'local',
-    'staging',
-],
-
-// Or enable in all environments
-'environments' => [],
-```
-
 ## Best Practices
 
 1. **Sensitive Data**: Be cautious when enabling `log_query_details` as it may expose sensitive data in logs
-2. **Production**: Consider disabling in production or using a separate log channel
+2. **Production**: Consider disabling in production by setting `QUERY_WATCHER_ENABLED=false` or using a separate log channel
 3. **Thresholds**: Adjust thresholds based on your application's normal query patterns
 4. **Exclusions**: Exclude admin panels, debug tools, and high-traffic endpoints that you're aware of
 
