@@ -2,6 +2,17 @@
 
 All notable changes to `laravel-query-watcher` will be documented in this file.
 
+## [1.3.1] - 2026-02-06
+
+### Added
+- New configuration option `slow_query_console_enabled` to enable/disable slow query detection for Artisan commands independently
+- Environment variable `QUERY_WATCHER_SLOW_QUERY_CONSOLE_ENABLED` for easier configuration
+- Updated `shouldDetectSlowQueries()` method to check console-specific setting
+
+### Changed
+- Slow query detection for console commands is now controlled separately from web requests
+- When `slow_query_enabled` is true but `slow_query_console_enabled` is false, slow queries will only be logged for web requests
+
 ## [1.3.0] - 2024-11-26
 
 ### Changed

@@ -26,6 +26,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Enable Slow Query Detection for Console Commands
+    |--------------------------------------------------------------------------
+    |
+    | This option controls whether slow query detection is enabled for Artisan
+    | commands. Set to false to disable slow query monitoring in console while
+    | keeping it active for web requests.
+    |
+    */
+    'slow_query_console_enabled' => env('QUERY_WATCHER_SLOW_QUERY_CONSOLE_ENABLED', false),
+
+    /*
+    |--------------------------------------------------------------------------
     | Query Count Threshold
     |--------------------------------------------------------------------------
     |

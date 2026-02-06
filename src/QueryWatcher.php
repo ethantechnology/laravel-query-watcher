@@ -62,7 +62,18 @@ class QueryWatcher
      */
     protected function shouldDetectSlowQueries()
     {
-        return config('query-watcher.slow_query_enabled', false);
+        $enabled = config('query-watcher.slow_query_enabled', false);
+
+        if (!$enabled) {
+            return false;
+        }
+
+        // Check if running in console and console slow query is disabled
+        if (Compatibility::runningInConsole()) {
+            return config('query-watcher.slow_query_console_enabled', false);
+        }
+
+        return true;
     }
 
     /**
