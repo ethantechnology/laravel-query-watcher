@@ -2,6 +2,18 @@
 
 All notable changes to `laravel-query-watcher` will be documented in this file.
 
+## [1.4.0] - 2026-02-06
+
+### Added
+- New configuration option `slow_query_console_threshold` to set separate slow query threshold for Artisan commands (default: 3000ms / 3 seconds)
+- Environment variable `QUERY_WATCHER_SLOW_QUERY_CONSOLE_THRESHOLD` for easier configuration
+- New method `getSlowQueryThreshold()` to return appropriate threshold based on context (web vs console)
+
+### Changed
+- Refactored slow query detection to use different thresholds for web requests (1s) and console commands (3s)
+- `slow_query_threshold` now only applies to web requests
+- Console commands use `slow_query_console_threshold` which has a higher default to account for longer-running queries
+
 ## [1.3.1] - 2026-02-06
 
 ### Added

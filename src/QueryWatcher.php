@@ -122,6 +122,20 @@ class QueryWatcher
     }
 
     /**
+     * Get the slow query threshold based on context (web vs console)
+     *
+     * @return int
+     */
+    protected function getSlowQueryThreshold()
+    {
+        if (Compatibility::runningInConsole()) {
+            return config('query-watcher.slow_query_console_threshold', 3000);
+        }
+
+        return config('query-watcher.slow_query_threshold', 1000);
+    }
+
+    /**
      * Register the database query listener
      *
      * @return void
@@ -136,7 +150,7 @@ class QueryWatcher
                 return;
             }
 
-            $slowQueryThreshold = config('query-watcher.slow_query_threshold', 0);
+            $slowQueryThreshold = $this->getSlowQueryThreshold();
 
             if ($slowQueryThreshold > 0 && $query->time >= $slowQueryThreshold) {
                 $this->slowQueries[] = [

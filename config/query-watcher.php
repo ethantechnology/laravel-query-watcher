@@ -74,11 +74,23 @@ return [
     | Slow Query Threshold (milliseconds)
     |--------------------------------------------------------------------------
     |
-    | Log individual queries that exceed this execution time.
+    | Log individual queries that exceed this execution time for web requests.
     | Set to null or 0 to disable slow query logging.
     |
     */
     'slow_query_threshold' => env('QUERY_WATCHER_SLOW_QUERY_THRESHOLD', 1000),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Slow Query Console Threshold (milliseconds)
+    |--------------------------------------------------------------------------
+    |
+    | Log individual queries that exceed this execution time for Artisan commands.
+    | Console commands typically have longer-running queries, so this threshold
+    | is higher by default. Set to null or 0 to disable slow query logging.
+    |
+    */
+    'slow_query_console_threshold' => env('QUERY_WATCHER_SLOW_QUERY_CONSOLE_THRESHOLD', 3000),
 
     /*
     |--------------------------------------------------------------------------
